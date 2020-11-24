@@ -2,7 +2,6 @@ import sys
 import datetime
 from sqlalchemy import Column,ForeignKey,Integer,String,DateTime,Float,create_engine,engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship,sessionmaker
 
 Base = declarative_base()
 
@@ -18,5 +17,5 @@ class Participante(Base):#Participante
     ubicaciondisp3=Column(Integer)
     promediodisp=Column(Float)
 
-engine=create_engine('sqlite:///participantes.bd')
+engine=create_engine('sqlite:///participantes.db')
 Base.metadata.create_all(engine)
