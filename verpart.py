@@ -14,4 +14,4 @@ class verpart:
         session=DBSession()
         stmt=session.query(Participante).order_by(Participante.edad).all()
         for item in stmt:
-            print("Nombre: {} Edad: {} Puntaje: {}".format(item.nombre, item.edad, item.promediodisp))
+            print("Nombre: {} Edad: {}".format(item.nombre, item.edad))
